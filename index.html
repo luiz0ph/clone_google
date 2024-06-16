@@ -16,6 +16,14 @@
     <link rel="stylesheet" href="css/styles.css">
 
     <title>Google</title>
+
+    <script>
+        function pesquisarNoGoogle() {
+            var query = document.getElementById('pesquisa').value;
+            var url = 'https://www.google.com/search?q=' + encodeURIComponent(query);
+            window.open(url, '_blank');
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -26,7 +34,15 @@
             </span>
 
             <span>
-                <img src="img/apps.png" alt="icone de apps" id="apps">
+
+                <!-- Menu suspenso -->
+                <span>
+                    <img src="img/apps.png" alt="icone de apps" id="apps">
+                    <div>
+
+                    </div>
+                </span>
+
                 <button id="login">Fazer Login</button>
             </span>
         </nav>
@@ -41,7 +57,7 @@
         </section>
 
         <section id="barra_pesquisa">
-            <form action="#">
+            <form action="#" autocomplete="off" method="post">
                 <label for="pesquisa">
                     <div class="input-container">
                         <i class="fa fa-search"></i>
@@ -53,10 +69,10 @@
                 </label>
 
                 <div id="btns">
-                    <button>
+                    <button onclick="pesquisarNoGoogle()">
                         Pesquisa Google
                     </button>
-                    <button>
+                    <button onclick="pesquisarNoGoogle()">
                         Estou com sorte
                     </button>
                 </div>
@@ -88,8 +104,17 @@
     </footer>
 
     <script>
-        // 
+        document.addEventListener('DOMContentLoaded', () => {
+        const pesquisa = document.getElementById('pesquisa');
+        pesquisa.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter') {
+                pesquisarNoGoogle(); 
+            }
+        });
+     });
     </script>
+
+    <script src="main.js"></script>
 </body>
 </html>
 
