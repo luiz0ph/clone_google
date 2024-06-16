@@ -56,7 +56,7 @@ img#apps {
 }
 
 #logo {
-    width: 55vw;
+    width: 50vw;
 }
 
 #login {
@@ -76,8 +76,17 @@ main {
     flex: 1;
 }
 
+figure {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: start;
+    align-items: center;
+}
+
 input {
     width: 90vw;
+    max-width: 550px;
+    height: 42px;
     padding: 10px 10px 10px 40px;
     border: 1px solid #ffffff80;
     border-radius: 20px;
@@ -88,16 +97,20 @@ input {
 
 .input-container {
     position: relative;
-    width: 100%;
-    max-width: 400px; /* Defina a largura máxima do contêiner */
+    width: 100vw;
+    max-width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .input-container i {
     position: absolute;
-    left: 10px;
+    left: 7.5%;
     top: 50%;
     transform: translateY(-50%);
     color: #aaa; /* Cor do ícone */
+    z-index: 9999;
 }
 
 #btns {
@@ -148,4 +161,48 @@ ul {
     flex-flow: row wrap;
     align-items: center;
     line-height: 30px;
+}
+
+#local {
+    font-size: 18px;
+    padding: 0 10px;
+}
+
+@media screen and (min-width: 600px) and (max-width: 1100px) {
+    #logo {
+        width: 40vw;
+    }
+
+    .input-container i {
+        left: 7%;
+    }
+
+    input {
+        padding: 10px 10px 10px 60px;
+    }
+
+    #btns > button {
+        padding: 10px;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    #logo {
+        width: 25vw;
+    }
+
+    input {
+        padding: 10px 10px 10px 40px;
+        z-index: 0;
+    }
+
+    #btns > button {
+        padding: 10px;
+    }
+
+    #footer_nav {
+        display: flex;
+        justify-content: space-between;
+        margin: 10px;
+    }
 }
