@@ -1,0 +1,151 @@
+@charset "UTF-8";
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --principal: #202124;
+    --input: #303134;
+    --footer: #171717;
+}
+
+body {
+    background-color: var(--principal);
+    padding: 20px;
+    height: 100vh;
+}
+
+header {
+    margin-bottom: 50px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav > span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+a {
+    font-size: 18px;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.3s all ease;
+}
+
+a:hover {
+    text-decoration: underline #fff;
+    text-underline-offset: 2px;
+    transition: 0.3s all ease;
+}
+
+img#apps {
+    height: 35px;
+    cursor: pointer;
+}
+
+#logo {
+    width: 55vw;
+}
+
+#login {
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    border: 1px solid #00000090;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+input {
+    width: 90vw;
+    padding: 10px 10px 10px 40px;
+    border: 1px solid #ffffff80;
+    border-radius: 20px;
+    background-color: var(--input);
+    margin: 20px 0;
+    color: #fff;
+}
+
+.input-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px; /* Defina a largura máxima do contêiner */
+}
+
+.input-container i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa; /* Cor do ícone */
+}
+
+#btns {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+#btns > button {
+    cursor: pointer;
+    padding: 7px;
+    border-radius: 5px;
+    border: 1px solid #00000070;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #303134;
+    color: #fff;
+}
+
+#btns > button:hover {
+    border: 1px solid #ffffffaa;
+    transition: 0.3s all ease;
+}
+
+footer {
+    position: fixed;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    background-color: var(--footer);
+    padding: 10px;
+    color: #fff;
+}
+
+hr {
+    margin: 5px 0;
+}
+
+li {
+    list-style-type: none;
+    margin: 0 10px;
+}
+
+ul {
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+    align-items: center;
+    line-height: 30px;
+}
