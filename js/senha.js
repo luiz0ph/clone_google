@@ -10,15 +10,6 @@ function voltar() {
     window.history.back();
 }
 
-// Ao clicar enter verificar o campo de senha
-document.addEventListener('DOMContentLoaded', () => {
-    document.addEventListener('keydown', (event) => {
-        if (event.key === 'Enter') {
-            enviarSenha();
-        }
-    });
-});
-
 let userInput = document.getElementById('user');
 let userLabel = document.getElementById('label_user');
 let btnEnviar = document.getElementById('avancar');
@@ -26,15 +17,15 @@ let btnEnviar = document.getElementById('avancar');
 btnEnviar.addEventListener('click', enviarSenha);
 
 function enviarSenha(event) {
+    event.preventDefault();
     let valorUserInput = document.getElementById('user').value;
     if (valorUserInput.trim() == '') {
         // Se não tiver nada no input
         menssagemError();
-        event.preventDefault();
         return false;
-    } 
-
-    return true;
+    } else {
+        window.open('../index.html', '_self');
+    }
 }
 
 function menssagemError() {
@@ -58,3 +49,12 @@ function mostrarSenha() {
         userInput.type = 'password'; // Ocultar a senha
     }
 }
+
+// Ao clicar enter verificar o campo de senha
+document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+            enviarSenha(event);
+        }
+    });
+});

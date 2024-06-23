@@ -41,7 +41,7 @@
         </header>
 
         <div id="formulario">
-            <form action="index.html" method="post" autocomplete="off" id="login" onsubmit="return enviarSenha(event)">
+            <form method="post" autocomplete="off" id="login">
                 <input 
                 type="password"
                 name="user_senha"
@@ -52,7 +52,7 @@
                 <label for="user" id="label_user">Senha</label>
 
                 <!-- Menssagem de erro -->
-                <span class="error-message" id="menssagem_error">
+                <span class="error-message" id="menssagem_error" aria-describedby="logo_erro texto_erro">
                     <span id="logo_erro">
                         <svg fill="currentColor" width="16px" height="16px" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg">
                             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z">
@@ -78,7 +78,7 @@
                         <a href="#">Esqueceu a senha?</a>
                     </span>
 
-                    <button type="submit" id="avancar" onclick="enviarSenha()">
+                    <button type="submit" id="avancar" onclick="enviarSenha(event)">
                         Avançar
                     </button>      
                 </div>

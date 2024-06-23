@@ -31,7 +31,7 @@
         </header>
 
         <div id="formulario">
-            <form  method="post" autocomplete="on" id="login">
+            <form method="POST" autocomplete="on" id="login">
               <div id="input_user">
                 <input 
                 type="text"
@@ -39,11 +39,12 @@
                 name="user_email"
                 autocomplete="email"
                 placeholder=""
-                >
+                required
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
                 <label for="user" id="label_user">E-mail</label>
 
                 <!-- Menssagem de erro -->
-                <span class="error-message" id="menssagem_error">
+                <span class="error-message" id="menssagem_error" aria-describedby="logo_erro texto_erro">
                     <span id="logo_erro">
                         <svg fill="currentColor" width="16px" height="16px" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg">
                             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z">
@@ -68,14 +69,14 @@
                     <button type="button" id="criar_conta" onclick="myFunction()">
                         Criar conta
                     </button>
-                    <div id="myDropdown" class="dropdown-content">
+                    <div id="myDropdown" class="dropdown-content" role="menu">
                         <a href="#">Para uso pessoal</a>
                         <a href="#">Para uma criança</a>
                         <a href="#">Para uma empresa ou trabalho</a>
                     </div>
                 </span>
 
-                <button type="submit" id="avancar">
+                <button type="button" id="avancar">
                     Avançar
                 </button>
               </div>
