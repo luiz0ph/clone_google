@@ -16,25 +16,16 @@
     <link rel="stylesheet" href="css/styles.css">
 
     <title>Google</title>
-
-    <script>
-        function pesquisarNoGoogle() {
-            var query = document.getElementById('pesquisa').value;
-            var url = 'https://www.google.com/search?q=' + encodeURIComponent(query);
-            window.open(url, '_blank');
-        }
-    </script>
 </head>
 <body>
     <header>
         <nav>
             <span>
-                <a href="#">Gmail</a>
+                <a href="login.html">Gmail</a>
                 <a href="#">Imagens</a>
             </span>
 
-            <span>
-
+            <span id="app_login">
                 <!-- Menu suspenso -->
                 <span>
                     <img src="img/apps.png" alt="icone de apps" id="apps">
@@ -43,7 +34,7 @@
                     </div>
                 </span>
 
-                <button id="login">Fazer Login</button>
+                <button id="login" onclick="abrirLogin()">Fazer Login</button>
             </span>
         </nav>
     </header>
@@ -57,26 +48,27 @@
         </section>
 
         <section id="barra_pesquisa">
-            <form action="#" autocomplete="off" method="post">
-                <label for="pesquisa">
-                    <div class="input-container">
-                        <i class="fa fa-search"></i>
-                        <input
-                        type="text"
-                        name="pesquisa"
-                        id="pesquisa">
-                    </div>
-                </label>
-
-                <div id="btns">
-                    <button onclick="pesquisarNoGoogle()">
-                        Pesquisa Google
-                    </button>
-                    <button onclick="pesquisarNoGoogle()">
-                        Estou com sorte
-                    </button>
+            
+            <label for="pesquisa">
+                <div class="input-container">
+                    <i class="fa fa-search"></i>
+                    <input
+                    type="text"
+                    name="pesquisa"
+                    id="pesquisa"
+                    autocomplete="off">
                 </div>
-            </form>
+            </label>
+
+            <div id="btns">
+                <button onclick="pesquisarNoGoogle()">
+                    Pesquisa Google
+                </button>
+                <button onclick="pesquisarNoGoogle()">
+                    Estou com sorte
+                </button>
+            </div>
+            
         </section>
     </main>
 
@@ -98,25 +90,15 @@
             <ul>
                 <li><a href="https://policies.google.com/privacy?hl=pt-BR&fg=1">Privacidade</a></li>
                 <li><a href="https://policies.google.com/terms?hl=pt-BR&fg=1">Termos</a></li>
-                <li>Configurações</li>
+                <li><a href="#">Configurações</a></li>
             </ul>
         </div>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-        const pesquisa = document.getElementById('pesquisa');
-        pesquisa.addEventListener('keydown', (event) => {
-            if (event.key === 'Enter') {
-                pesquisarNoGoogle(); 
-            }
-        });
-     });
-    </script>
-
-    <script src="main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
 
 <!-- Tema escuro: https://www.google.com/images/branding/googlelogo/1x/googlelogo_light_color_272x92dp.png -->
- <!-- Tema claro: https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png -->
+
+<!-- Tema claro: https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png -->

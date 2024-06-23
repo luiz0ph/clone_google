@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="https://www.google.com/favicon.ico" type="image/x-icon">
+
+    <!-- Arquivo CSS -->
+     <link rel="stylesheet" href="css/login.css">
+
+    <title>Fazer login nas contas do Google</title>
+</head>
+<body>
+    <main>
+        <header>
+            <div id="logo">
+                <figure>
+                    <img src="img/logo_google.png" alt="logo do google" id="logo_google">
+                </figure>
+            </div>
+
+            <div id="descricao">
+                <h1>Fazer Login</h1>
+                <p>Use sua conta do Google</p>
+            </div>
+        </header>
+
+        <div id="formulario">
+            <form action="senha.html" method="post" autocomplete="on" id="login">
+              <div id="input_user">
+                <input 
+                type="text"
+                id="user"
+                name="user_email"
+                autocomplete="email"
+                placeholder=""
+                >
+                <label for="user" id="label_user">E-mail</label>
+
+                <!-- Menssagem de erro -->
+                <span class="error-message" id="menssagem_error">
+                    <span id="logo_erro">
+                        <svg fill="currentColor" width="16px" height="16px" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z">
+
+                            </path>
+                        </svg>
+                    </span>
+                    <span id="texto_erro">Digite seu E-mail !</span>
+                </span>
+              </div>
+              <div id="esqueceu_e-mail">
+                <a href="#">Esqueceu seu e-mail?</a>
+              </div>
+
+              <div id="termos">
+                <p>Não está no seu computador? Use o modo visitante para fazer login com privacidade.</p> 
+                <a href="https://support.google.com/chrome/answer/6130773?hl=pt-BR">Saiba mais sobre como usar o Modo Visitante</a>
+              </div>
+
+              <div id="btns">
+                <span class="dropdown">
+                    <button type="button" id="criar_conta" onclick="myFunction()">
+                        Criar conta
+                    </button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="#">Para uso pessoal</a>
+                        <a href="#">Para uma criança</a>
+                        <a href="#">Para uma empresa ou trabalho</a>
+                    </div>
+                </span>
+
+                <button type="submit" id="avancar">
+                    Avançar
+                </button>
+              </div>
+            </form>
+        </div>
+    </main>
+
+    <div id="outros">
+        <div id="selecionar_idioma">
+            <select name="idioma" id="idioma">
+                <option value="pt-br">Português (Brasil)</option>
+            </select>
+        </div>
+
+        <div id="politicas">
+            <ul>
+                <li><a href="https://support.google.com/accounts?hl=pt-BR&visit_id=638544889213654870-204264878&rd=2&p=account_iph#topic=3382296">Ajuda</a></li>
+
+                <li><a href="https://policies.google.com/privacy?gl=BR&hl=pt-BR">Privacidade</a></li>
+
+                <li><a href="https://policies.google.com/terms?gl=BR&hl=pt-BR">Termos</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="js/login.js"></script>
+</body>
+</html>
