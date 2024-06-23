@@ -21,7 +21,7 @@ function verificarLogin(event) {
     } else {
         let Email = document.getElementById('user').value;
         window.localStorage.setItem('Email', Email);
-        window.open('senha.html', '_self');
+        window.open('https://luiz0ph.github.io/clone_google/senha.html', '_self');
 
     }
 }   

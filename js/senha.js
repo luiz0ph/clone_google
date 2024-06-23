@@ -24,7 +24,7 @@ function enviarSenha(event) {
         menssagemError();
         return false;
     } else {
-        window.open('index.html', '_self');
+        window.open('https://luiz0ph.github.io/clone_google/index.html', '_self');
     }
 }
 
